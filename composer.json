@@ -12,16 +12,25 @@
     ],
     "autoload": {
         "psr-4": {
-            "MigrationWrangler\\": "src/"
+            "SRLabs\\MigrationWrangler\\": "src/"
+
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SRLabs\\MigrationWrangler\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "stable",
     "require": {
         "illuminate/support": "^5.5",
-        "illuminate/database": "^5.5"
+        "illuminate/database": "^5.5",
+        "illuminate/console": "^5.5"
     },
     "require-dev": {
-        "orchestra/testbench": "^3.5"
+        "orchestra/testbench": "^3.5",
+        "phpunit/phpunit": "^6.5",
+        "orchestra/database": "^3.5"
     },
     "extra": {
         "laravel": {

@@ -1,6 +1,10 @@
 <?php
 
-class TestCase extends Orchestra\Testbench\TestCase
+namespace SRLabs\MigrationWrangler\Tests;
+
+use Orchestra\Testbench\TestCase as OrchestraTestCase;
+
+class TestCase extends OrchestraTestCase
 {
     /**
      * Setup the test environment.
@@ -9,7 +13,7 @@ class TestCase extends Orchestra\Testbench\TestCase
     {
         parent::setUp();
 
-        // Your code here
+        $this->loadMigrationsFrom(__DIR__ . '/Database');
     }
 
     /**
@@ -20,7 +24,10 @@ class TestCase extends Orchestra\Testbench\TestCase
      */
     protected function getPackageProviders($app)
     {
-        return [MigrationWrangler\Provider::class];
+        return [
+            \SRLabs\MigrationWrangler\Provider::class,
+            \Orchestra\Database\ConsoleServiceProvider::class,
+        ];
     }
 
     /**
