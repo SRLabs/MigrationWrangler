@@ -1,0 +1,33 @@
+{
+    "name": "srlabs/migration-wrangler",
+    "description": "Import and export migration table data in Laravel projects.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ryan Durham",
+            "email": "ryan@stagerightlabs.com",
+            "homepage": "http://stagerightlabs.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MigrationWrangler\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/support": "^5.5",
+        "illuminate/database": "^5.5"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MigrationWrangler\\Provider"
+            ]
+        }
+    }
+}
