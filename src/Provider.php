@@ -5,6 +5,7 @@ namespace SRLabs\MigrationWrangler;
 use Illuminate\Support\ServiceProvider;
 use SRLabs\MigrationWrangler\Commands\MigrationsImporter;
 use SRLabs\MigrationWrangler\Commands\MigrationsExporter;
+use SRLabs\MigrationWrangler\Commands\MigrationsJsonGenerator;
 
 class Provider extends ServiceProvider
 {
@@ -19,6 +20,7 @@ class Provider extends ServiceProvider
             $this->commands([
                 MigrationsExporter::class,
                 MigrationsImporter::class,
+                MigrationsJsonGenerator::class,
             ]);
         }
     }
