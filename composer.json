@@ -1,6 +1,11 @@
 {
     "name": "srlabs/migration-wrangler",
     "description": "Import and export migration table data in Laravel projects.",
+    "keywords": [
+        "laravel",
+        "migrations",
+        "database"
+    ],
     "type": "library",
     "license": "MIT",
     "authors": [
