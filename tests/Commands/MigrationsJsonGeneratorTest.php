@@ -16,7 +16,7 @@ class MigrationsJsonGeneratorTest extends TestCase
         ]);
 
         $now = Carbon::now()->format('Ymd');
-        $expectedFile = __DIR__ . "/../Stubs/migrations.json";
+        $expectedFile = __DIR__ . "/../Stubs/generated_migrations.json";
         $expectedPrettyFile = __DIR__ . "/../Stubs/pretty_migrations.json";
         $generatedFile = $path . '/migrations_' . $now . ".json";
         $this->assertFileExists($generatedFile);

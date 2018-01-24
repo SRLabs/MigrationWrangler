@@ -51,10 +51,12 @@ class MigrationsJsonGenerator extends Command
         $migrations = $this->getMigrationNames($path)
             ->reduce(function ($carry, $item) {
                 $batch = count($carry) + 1;
+                $id = count($carry) + 1;
 
                 $carry[] = [
+                    'id' => strval($id),
                     'migration' => $item,
-                    'batch' => $batch,
+                    'batch' => strval($batch),
                 ];
 
                 return $carry;
