@@ -22,7 +22,7 @@ class MigrationsExporter extends Command
      */
     protected $signature = 'migrations:export
         {--database= : The database connection to use.}
-        {--path= : The destination for the json file.}
+        {--filepath= : The destination for the json file.}
         {--pretty : Write the json with a readable structure.}
         {--force : Force the operation to run when in production.}';
 
@@ -85,10 +85,10 @@ class MigrationsExporter extends Command
         $filename = "{$database}_migrations_{$now}.json";
 
         // Establish the export path
-        $path = ($this->option('path') ?? database_path()) . '/' . $filename;
+        $filepath = ($this->option('filepath') ?? database_path()) . '/' . $filename;
 
         // Write the json to the file
-        $file = fopen($path, 'w');
+        $file = fopen($filepath, 'w');
         fwrite($file, json_encode($migrations, $jsonOptions));
         fclose($file);
 

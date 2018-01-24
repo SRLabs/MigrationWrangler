@@ -10,7 +10,7 @@ class MigrationsExporterTest extends TestCase
     {
         $path = __DIR__ . "/../Database";
         Artisan::call('migrations:export', [
-            '--path' => $path,
+            '--filepath' => $path,
         ]);
 
         $now = Carbon::now()->format('Ymd');
@@ -28,7 +28,7 @@ class MigrationsExporterTest extends TestCase
     {
         $path = __DIR__ . "/../Database";
         Artisan::call('migrations:export', [
-            '--path' => $path,
+            '--filepath' => $path,
             '--pretty' => true
         ]);
 
