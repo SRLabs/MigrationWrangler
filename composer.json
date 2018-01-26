@@ -40,7 +40,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MigrationWrangler\\Provider"
+                "SRLabs\\MigrationWrangler\\Provider"
             ]
         }
     }
