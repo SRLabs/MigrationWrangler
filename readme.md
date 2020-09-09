@@ -1,6 +1,8 @@
-# Migration Wrangler
+### WARNING
 
-[![Build Status](https://travis-ci.org/SRLabs/MigrationWrangler.svg?branch=master)](https://travis-ci.org/SRLabs/MigrationWrangler)
+This package has been deprecated; new schema management tools have been added directly to Laravel 8; you can read about them here: [https://laravel.com/docs/8.x/migrations#squashing-migrations](https://laravel.com/docs/8.x/migrations#squashing-migrations)
+
+# Migration Wrangler
 
 Sometimes you may find that you want to port a migrations table from one database to another.   This might occur if you are refactoring your migrations and want to update your production database migrations table to allow future migration tasks to remain in sync with your development database.   This tool provides three artisan commands that should make that process easier.
 
